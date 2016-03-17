@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Jonathan Ben-Ammi">
+	<title>Contact Card Assignment</title>
+	<meta name="description" content="This is a JQuery assignment for CodingDojo">
+	<link rel="stylesheet" type="text/css" href="contactstyle.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#card_form').submit(function(){
+				$('#container2').append(
+					"<div class='card'><h2 class='slide'></h2><table><tbody><tr><td class='card_title'>Nick Name:</td><td class='card_info'></td></tr><tr><td class='card_title'>E-Mail:</td><td class='card_info'></td></tr><tr><td class='card_title'>Phone Number:</td><td class='card_info'></td></tr><tr><td class='card_title'>Important Information:</td><td class='card_info'></td></tr></tbody></table>"); 
+				$('h2:last').text($('#card_form').children('input:first').val());
+				$('h2:last').append(" " + $('#card_form').children('input:nth-child(2)').val());
+				$('tbody:last').children('tr:first').children('td:last').text($('#card_form').children('input:nth-child(3)').val());
+				$('tbody:last').children('tr:nth-child(2)').children('td:last').text($('#card_form').children('input:nth-child(4)').val());
+				$('tbody:last').children('tr:nth-child(3)').children('td:last').text($('#card_form').children('input:nth-child(5)').val());
+				$('tbody:last').children('tr:nth-child(4)').children('td:last').text($('#card_form').children('textarea').val());
+				$('.formfield').val('');
+				$('table').hide();
+				return false;
+			})
+			$(document).on('click', 'h2', function() {
+				$(this).siblings('table').slideToggle('slow');
+			})
+		})
+	</script>
+</head>
+<body>
+<div id="shell">
+	<div id="container1">
+	<h1>Contact Card Information</h1>
+	<p>fill out the form below and add information about each contact.</p>
+	<p>To retrieve the contact information, click on the contact name.</p>
+	<div id="info_form">
+	<ul>
+		<li>First Name:</li>
+		<li>Last Name:</li>
+		<li>Nick Name:</li>
+		<li>E-Mail:</li>
+		<li>Phone Number:</li>
+		<li>Important Information:</li>
+	</ul>
+	<form id="card_form">
+		<input class="formfield" type="text" placeholder="First Name" />
+		<input class="formfield" type="text" placeholder="Last Name" />
+		<input class="formfield" type="text" placeholder="Nick Name" />
+		<input class="formfield" type="email" placeholder="E-Mail Address" />
+		<input class="formfield" type="tel" placeholder="Phone Number" />
+		<textarea class="formfield" placeholder="Type your information here."></textarea>
+		<input type="submit" value="Create Card" />
+	</form>
+	</div>
+	</div>
+	<div id="container2">
+
+	</div>
+
+
+</div>
+</body>
+</html>
