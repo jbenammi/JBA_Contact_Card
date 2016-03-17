@@ -1,0 +1,99 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: arial, sans-serif;
+	font-size: 10pt;
+}
+#shell {
+	width: 960px;
+	margin: 0px auto;
+}
+#container1, #container2 {
+	width: 478px;
+	display: inline-block;
+	vertical-align: top;
+}
+h1 {
+	font-size: 2em;
+	margin: 20px;
+}
+h2 {
+	width: 300px;
+	font-size: 1.5em;
+	margin: 10px 20px 0px 20px;
+	padding: 5px 5px 5px 10px;
+	color: #08332a;
+	background: linear-gradient(#3d627f,#a3e7da);
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+.card_info {
+	font-size: 1em;
+	padding: 5px;
+	color: #ffffff;
+}
+table {
+	display: block;
+	width: 400px;
+	background: linear-gradient(#a3e7da,#3d627f);
+	margin-left: 20px;
+	padding-bottom: 10px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-top-right-radius: 5px;
+}
+tr td {
+	margin: 10px;
+}
+.card_title {
+	text-align: right;
+	font-size: 1.1em;
+	font-weight: bold;
+	color: #162c3a;
+	padding-left: 10px;
+}
+
+p {
+	font-size: 1em;
+}
+#container1 p{
+	display: block;
+	margin-left: 20px;
+	padding-bottom: 10px;
+	width: 480px;
+}
+#info_form {
+	width: 440px;
+	margin: 20px;
+}
+form {
+	display: inline-block;
+	vertical-align: top;
+	width: 200px;
+}
+form input, form textarea{
+	margin-bottom: 5px;
+	padding: 3px;
+	font-size: 1em;
+	width: 200px;
+}
+ul {
+	display: inline-block;
+	vertical-align: top;
+	width: 150px;
+	text-align: right;
+}
+li {
+	padding: 5px 0px;
+	font-size: 1em;
+	list-style-type: none;
+	margin-bottom: 5px;
+}
+#info_form ul li:first-child {
+	padding-top: 5px;
+}
+#info_form input:last-child {
+	width: 100px;
+	margin-left: 106px;
+	border-radius: 5px;
+}
